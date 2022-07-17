@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_background"
+    tools:context=".start2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#75CEF2FD"
+            android:hint="     ID"
+            android:textColor="#DCCDA5"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/pw"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#75CEF2FD"
+            android:hint="     Password"
+            android:textColor="#DCCDA5"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/login2"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#E91E85F1"
+            android:hint="로그인"
+            android:shadowColor="#0B0A0A"
+            android:textColor="#DCCDA5"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp"
+            app:strokeColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
