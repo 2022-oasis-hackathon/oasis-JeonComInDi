@@ -171,6 +171,10 @@ public class activity_main extends AppCompatActivity implements View.OnClickList
             default:
                 break;
         }
+
+    }
+    public void s(View view){
+
     }
 
 }

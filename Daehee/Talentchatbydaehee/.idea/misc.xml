@@ -30,6 +30,17 @@
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_ranking.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_recommend.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/home.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.136993408203125" />
+        <entry key="app/src/main/res/layout/base_ranking.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/fragment_event.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/fragment_popular.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/fragment_ranking.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/fragment_recommend.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/home.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/profile.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/start.xml" value="0.2265034993489583" />
+        <entry key="app/src/main/res/layout/start2.xml" value="0.2520833333333333" />
       </map>
     </option>
   </component>
