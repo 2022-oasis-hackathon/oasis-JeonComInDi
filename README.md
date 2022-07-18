@@ -1,4 +1,4 @@
-# Project name or Logo
+# Talent Match
 ![TalentMatch](KakaoTalk_Image_2022-07-19-01-52-03.png)
 
 ## 프로젝트 소개
