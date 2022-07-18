@@ -39,13 +39,13 @@ var userSchema = mongoose.Schema({
     type:String,
     default:'None'
   },
-  reqfield:{
+  reqtalent:{
     type:String,
-    required:[true,'reqfield is required!']
+    required:[true,'reqtalent is required!']
   },
-  resfield:{
+  restalent:{
     type:String,
-    required:[true,'resfield is required!']
+    required:[true,'restalent is required!']
   },
   degree:{
     type:Number,
@@ -59,7 +59,7 @@ var userSchema = mongoose.Schema({
     type:[String],
     default:[]
   },
-  matchUser:{
+  matchuser:{
     type:[String],
     default:[]
   }

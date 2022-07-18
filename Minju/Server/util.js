@@ -10,6 +10,7 @@ util.successTrue = function(data){
     data:data
   };
 };
+
 util.successFalse = function(err, message){
   if(!err&&!message) message = 'data not found';
   console.log(err)
@@ -20,6 +21,15 @@ util.successFalse = function(err, message){
     data:null
   };
 };
+
+util.applyFalse = function(data){
+  return {
+    success:false,
+    message:null,
+    errors:null,
+    data:data
+  }
+}
 
 util.parseError = function(errors){
   var parsed = {};

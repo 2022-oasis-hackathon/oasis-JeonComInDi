@@ -6,9 +6,9 @@ var util     = require('../util');
 const { db } = require('../models/User');
 
 // 특정 카테고리의 유저 보기
-router.get('/soccer', util.isLoggedin,
+router.get('/:talent', util.isLoggedin,
 function(req,res,next){
-  db.collection("appusers").find({resfield : 'soccer'}).toArray(function(err,result){
+  db.collection("appusers").find({restalent : req.params.talent}).toArray(function(err,result){
     if (err) return res.json(util.successFalse(err));
     res.json(util.successTrue(result))
   })

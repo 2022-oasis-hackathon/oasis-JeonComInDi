@@ -12,7 +12,7 @@ router.get('/', util.isLoggedin, function(req,res,next){
   });
 });
 
-// create
+// create 이미지 넣을라면 얘 따로 빼야하나?
 router.post('/', function(req,res,next){
   var newUser = new User(req.body);
   newUser.save(function(err,user){

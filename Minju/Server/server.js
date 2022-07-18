@@ -30,6 +30,8 @@ app.use('/api/users', require('./api/users'));
 app.use('/api/auth', require('./api/auth'));
 app.use('/api/category', require('./api/category'));
 app.use('/api/matching', require('./api/matching'));
+app.use('/api/info', require('./api/info'));
+
 // Server
 var port = 3001;
 app.listen(port, function(){
