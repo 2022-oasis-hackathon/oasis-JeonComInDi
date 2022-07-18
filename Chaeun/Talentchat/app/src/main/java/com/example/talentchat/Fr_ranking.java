@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,8 +28,8 @@ public class Fr_ranking extends Fragment {
         View view = inflater.inflate(R.layout.fragment_ranking, container);
 
         rankView = view.findViewById(R.id.rankView);
-        rankView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        rankView.setAdapter(new Adapter_ranking());
+        rankView.setLayoutManager(new GridLayoutManager(view.getContext(), 4));
+        rankView.setAdapter(new Adapter_category_button());
 
         return view;
 

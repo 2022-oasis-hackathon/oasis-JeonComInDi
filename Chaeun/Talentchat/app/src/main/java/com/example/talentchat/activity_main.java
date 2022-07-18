@@ -173,4 +173,6 @@ public class activity_main extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    public void s(View view) {
+    }
 }

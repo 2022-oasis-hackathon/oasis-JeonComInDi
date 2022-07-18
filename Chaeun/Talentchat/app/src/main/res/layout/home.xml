@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3B76A5"
+    android:background="#FFFFFF"
     tools:context=".home">
 
     <androidx.viewpager2.widget.ViewPager2
@@ -14,27 +14,31 @@
         android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/tabLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginBottom="5dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:tabIndicatorColor="#FFFFFF"
+        app:tabIconTint="@color/purple_700"
+        app:tabIndicatorColor="#3555FA"
         app:tabIndicatorFullWidth="false"
-        app:tabIndicatorGravity="bottom">
+        app:tabIndicatorGravity="top"
+        app:tabTextColor="#1129AC">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="인기" />
+            android:icon="@drawable/ic_baseline_home_24" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

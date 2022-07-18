@@ -17,7 +17,9 @@ public class home extends AppCompatActivity {
     ViewPager2 viewPager;
     TabLayout tabLayout;
 
-    String[] label = {"인기", "랭킹", "이벤트", "추천"};
+    String[] label = {"홈", "카테고리", "매칭", "프로필"};
+    int[] icon = {R.drawable.ic_baseline_home_24, R.drawable.ic_baseline_auto_awesome_mosaic_24,
+    R.drawable.ic_baseline_contact_mail_24, R.drawable.ic_baseline_person_24};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class home extends AppCompatActivity {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
 
                 tab.setText(label[position]);
+                tab.setIcon(icon[position]);
             }
         }).attach();
     }
