@@ -1,5 +1,6 @@
 package com.example.talentchat;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Adapter_category_button extends RecyclerView.Adapter<Adapter_category_button.MyVH> {
 
@@ -28,9 +30,9 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
         public MyVH(@NonNull View itemView) {
             super(itemView);
 
-            button = itemView.findViewById(R.id.category_button);
-            tag = itemView.findViewById(R.id.category_tag);
-            imageView = itemView.findViewById(R.id.category_image);
+            button = itemView.findViewById(R.id.cate_detail_button);
+            tag = itemView.findViewById(R.id.cate_detail_tag);
+            imageView = itemView.findViewById(R.id.cate_detail_image);
         }
     }
 
@@ -38,7 +40,7 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
     @NonNull
     @Override
     public MyVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.round_button, parent, false));
+        return new MyVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.base_round_button, parent, false));
     }
 
     //만들어진 뷰에 내용을 넣는 거(for)
@@ -46,27 +48,29 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
         list = new ArrayList<>();
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
-        list.add(new button("Exercise", R.drawable.ic_baseline_person_24));
+        for(int i=0; i<16; i++) {
+            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
+        }
 
         holder.tag.setText(list.get(position).category_tag);
 
-        holder.imageView.setBackground(ResourcesCompat.getDrawable(holder.itemView.getResources(), list.get(position).category_image, holder.itemView.getContext().getTheme()));
+        holder.imageView.setBackground(ResourcesCompat.getDrawable(holder.itemView.getResources(),
+                list.get(position).category_image, holder.itemView.getContext().getTheme()));
 
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            //category 눌렀을 때 실행하게 하는 코드(#헬스와 같은 정보도 같이 넘어가게)
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), category_detail.class);
+                intent.putExtra("category", list.get(holder.getAdapterPosition()).category_tag);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        };
+
+        //holder 안에서 itemView, button, imageView를 눌렀을 때 인식되도록
+        holder.itemView.setOnClickListener(listener);
+        holder.button.setOnClickListener(listener);
+        holder.imageView.setOnClickListener(listener);
     }
 
     //반복 횟수

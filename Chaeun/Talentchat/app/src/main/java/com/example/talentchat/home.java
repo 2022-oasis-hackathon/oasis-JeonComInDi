@@ -8,9 +8,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 public class home extends AppCompatActivity {
 
@@ -39,6 +42,25 @@ public class home extends AppCompatActivity {
                 tab.setIcon(icon[position]);
             }
         }).attach();
+
+        Gson gson = new Gson();
+        String json = "{\n" +
+                "\"name\": \"이름\",\n" +
+                "\"age\": 24,\n" +
+                "\"username\": \"유저id\",\n" +
+                "\"password\": \"비번\",\n" +
+                "\"certification\": false,\n" +
+                "\"universityName\": \"전남대학교\",\n" +
+                "\"department\": \"소프트웨어공학과\",\n" +
+                "\"reqtalent\": \"코딩\",\n" +
+                "\"restalent\": \"음악\",\n" +
+                "\"degree\": 10,\n" +
+                "\"reqapply\": [\"가\", \"나\"],\n" +
+                "\"resapply\": [\"가\", \"나\"],\n" +
+                "\"matchuser\": [\"가\", \"나\"]\n" +
+                "}";
+        JsonObject object = gson.fromJson(json, JsonObject.class);
+        Toast.makeText(this, object.get("name").getAsString(), Toast.LENGTH_SHORT).show();
     }
 }
 
