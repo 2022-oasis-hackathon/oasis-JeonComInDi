@@ -24,7 +24,7 @@
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1265" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_auto_awesome_mosaic_24.xml" value="0.2265" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_contact_mail_24.xml" value="0.1265" />
-        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.178" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.176" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2265" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.252" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/round.xml" value="0.183" />
@@ -33,11 +33,18 @@
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_category.xml" value="0.264" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_category_detail.xml" value="0.4" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_matching.xml" value="0.264" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_ranking.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_round_button.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/category_detail.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_category.xml" value="0.15925925925925927" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_event.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_home.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_match.xml" value="0.2" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_match2.xml" value="0.15925925925925927" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_match3.xml" value="0.15925925925925927" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_popular.xml" value="0.2327502429543246" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_profile.xml" value="0.24564102564102563" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_ranking.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_recommend.xml" value="0.24947916666666667" />
         <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/home.xml" value="0.24947916666666667" />

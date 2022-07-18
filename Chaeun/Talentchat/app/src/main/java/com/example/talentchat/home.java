@@ -20,9 +20,10 @@ public class home extends AppCompatActivity {
     ViewPager2 viewPager;
     TabLayout tabLayout;
 
-    String[] label = {"홈", "카테고리", "매칭", "프로필"};
-    int[] icon = {R.drawable.ic_baseline_home_24, R.drawable.ic_baseline_auto_awesome_mosaic_24,
-    R.drawable.ic_baseline_contact_mail_24, R.drawable.ic_baseline_person_24};
+    //private int[] icon;
+    int[] icon = {R.drawable.home_logo, R.drawable.category_logo,
+    R.drawable.matching_logo, R.drawable.profile_logo};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,6 @@ public class home extends AppCompatActivity {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
 
-                tab.setText(label[position]);
                 tab.setIcon(icon[position]);
             }
         }).attach();
@@ -78,13 +78,13 @@ class Frags extends FragmentStateAdapter{
 
         switch (position){
             case 0: //인기
-                return new Fr_popular();
+                return new Fr_home();
             case 1: //랭킹
-                return new Fr_ranking();
+                return new Fr_category();
             case 2: //이벤트
-                return new Fr_event();
+                return new Fr_match();
             default: //3번, 추천
-                return new Fr_recommend();
+                return new Fr_profile();
         }
 
     }

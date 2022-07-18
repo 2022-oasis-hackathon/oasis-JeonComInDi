@@ -62,6 +62,7 @@ public class activity_main extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_get:
+                //[String] data는 getFunc안에 들어간다!!
                 Call<ResponseBody> call_get = service.getFunc("get data");
                 call_get.enqueue(new Callback<ResponseBody>() {
                     @Override

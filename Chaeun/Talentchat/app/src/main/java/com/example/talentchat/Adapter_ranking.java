@@ -38,7 +38,7 @@ public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> 
     @NonNull
     @Override
     public MyVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.base_ranking, parent, false));
+        return new MyVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.base_matching, parent, false));
     }
 
     //만들어진 뷰에 내용을 넣는 거(for)
