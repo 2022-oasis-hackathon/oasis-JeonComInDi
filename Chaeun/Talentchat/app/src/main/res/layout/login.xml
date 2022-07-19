@@ -4,27 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_background"
+    android:background="#FFFFFF"
     tools:context=".start2">
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blur_logo" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView9">
 
         <EditText
             android:id="@+id/id"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:background="@drawable/round"
-            android:backgroundTint="#75CEF2FD"
+            android:background="@drawable/round2"
             android:hint="     ID"
             android:textColor="#DCCDA5"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#9A9999"
             android:textSize="20sp" />
 
         <EditText
@@ -33,20 +45,17 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/round"
-            android:backgroundTint="#75CEF2FD"
+            android:background="@drawable/round2"
             android:hint="     Password"
             android:textColor="#DCCDA5"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#9A9999"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/login2"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/round"
-            android:backgroundTint="#E91E85F1"
-            android:hint="로그인"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+            android:background="@drawable/login_button_whiteplus"
             android:shadowColor="#0B0A0A"
             android:textColor="#DCCDA5"
             android:textColorHint="#FFFFFF"

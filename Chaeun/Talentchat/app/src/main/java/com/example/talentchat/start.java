@@ -23,6 +23,6 @@ public class start extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), start2.class));
             }
         };
-        h.postDelayed(r, 2000);
+        h.postDelayed(r, 1000);
     }
 }
