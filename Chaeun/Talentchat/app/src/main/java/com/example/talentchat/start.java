@@ -16,6 +16,7 @@ public class start extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
 
+
         h = new Handler();
         r = new Runnable() {
             @Override

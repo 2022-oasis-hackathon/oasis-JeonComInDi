@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.45">
 
         <ImageView
-            android:id="@+id/img1"
+            android:id="@+id/imageView14"
             android:layout_width="137dp"
             android:layout_height="134dp"
             android:layout_marginTop="40dp"
@@ -29,7 +29,7 @@
             app:srcCompat="@drawable/profile" />
 
         <ImageView
-            android:id="@+id/img2"
+            android:id="@+id/apply"
             android:layout_width="263dp"
             android:layout_height="135dp"
             android:layout_marginBottom="32dp"
@@ -38,27 +38,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/go_matching" />
 
+        <ImageView
+            android:id="@+id/reject"
+            android:layout_width="263dp"
+            android:layout_height="135dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/img5"
+            app:layout_constraintEnd_toEndOf="@+id/img4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/profile_reject" />
+
+        <ImageView
+            android:id="@+id/accept"
+            android:layout_width="263dp"
+            android:layout_height="135dp"
+            android:layout_marginBottom="76dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/img5"
+            app:layout_constraintEnd_toEndOf="@+id/img4"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/profile_accept" />
+
         <TextView
             android:id="@+id/Username2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
             android:text="김하람"
             android:textColor="#000000"
             android:textSize="25sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/apply"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img1" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/img4"
             android:layout_width="152dp"
             android:layout_height="129dp"
-            android:layout_marginBottom="260dp"
+            android:layout_marginBottom="280dp"
             android:adjustViewBounds="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Username2"
             app:srcCompat="@drawable/profile_plus2" />
 
         <ImageView

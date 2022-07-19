@@ -4,13 +4,13 @@ public class User {
 
     String imageUrl; //프로필 사진
     String name; //이름
-    String[] tags; //태그 (2개 제한)
     int image;
+    int mode;
 
-    public User(String name, String[] tags, int image){
+    public User(String name, int image, int mode){
         this.name = name;
-        this.tags = tags;
         this.image = image;
+        this.mode = mode;
     }
 
 }

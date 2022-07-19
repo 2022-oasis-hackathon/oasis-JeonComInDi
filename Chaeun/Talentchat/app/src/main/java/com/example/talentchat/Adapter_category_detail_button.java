@@ -18,6 +18,10 @@ public class Adapter_category_detail_button extends RecyclerView.Adapter<Adapter
 
     ArrayList<detail_button> list;
 
+    public Adapter_category_detail_button(ArrayList<detail_button> list){
+        this.list = list;
+    }
+
     //작은 뷰 하나
     static class MyVH extends RecyclerView.ViewHolder{
 
@@ -46,23 +50,35 @@ public class Adapter_category_detail_button extends RecyclerView.Adapter<Adapter
     @Override
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
-        list = new ArrayList<>();
-        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
-        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
-        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
-        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
-        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+//        list = new ArrayList<>();
+//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
 
         holder.req.setText(list.get(position).category_req);
         holder.res.setText(list.get(position).category_res);
 
         holder.detail_image.setBackground(ResourcesCompat.getDrawable(holder.itemView.getResources(),
                 list.get(position).category_detail_image, holder.itemView.getContext().getTheme()));
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), UserProfile.class);
+                intent.putExtra("name", list.get(holder.getAdapterPosition()).username);
+                intent.putExtra("id", list.get(holder.getAdapterPosition()).userid);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        };
+
+        holder.itemView.setOnClickListener(listener);
     }
 
     //반복 횟수
     @Override
     public int getItemCount() {
-        return 5;
+        return list.size();
     }
 }

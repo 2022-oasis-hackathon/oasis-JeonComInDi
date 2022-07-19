@@ -30,6 +30,8 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+        Get.firstInit(this);
+
         viewPager = findViewById(R.id.view);
         viewPager.setAdapter(new Frags(this));
 
@@ -43,24 +45,24 @@ public class home extends AppCompatActivity {
             }
         }).attach();
 
-        Gson gson = new Gson();
-        String json = "{\n" +
-                "\"name\": \"이름\",\n" +
-                "\"age\": 24,\n" +
-                "\"username\": \"유저id\",\n" +
-                "\"password\": \"비번\",\n" +
-                "\"certification\": false,\n" +
-                "\"universityName\": \"전남대학교\",\n" +
-                "\"department\": \"소프트웨어공학과\",\n" +
-                "\"reqtalent\": \"코딩\",\n" +
-                "\"restalent\": \"음악\",\n" +
-                "\"degree\": 10,\n" +
-                "\"reqapply\": [\"가\", \"나\"],\n" +
-                "\"resapply\": [\"가\", \"나\"],\n" +
-                "\"matchuser\": [\"가\", \"나\"]\n" +
-                "}";
-        JsonObject object = gson.fromJson(json, JsonObject.class);
-        Toast.makeText(this, object.get("name").getAsString(), Toast.LENGTH_SHORT).show();
+//        Gson gson = new Gson();
+//        String json = "{\n" +
+//                "\"name\": \"이름\",\n" +
+//                "\"age\": 24,\n" +
+//                "\"username\": \"유저id\",\n" +
+//                "\"password\": \"비번\",\n" +
+//                "\"certification\": false,\n" +
+//                "\"universityName\": \"전남대학교\",\n" +
+//                "\"department\": \"소프트웨어공학과\",\n" +
+//                "\"reqtalent\": \"코딩\",\n" +
+//                "\"restalent\": \"음악\",\n" +
+//                "\"degree\": 10,\n" +
+//                "\"reqapply\": [\"가\", \"나\"],\n" +
+//                "\"resapply\": [\"가\", \"나\"],\n" +
+//                "\"matchuser\": [\"가\", \"나\"]\n" +
+//                "}";
+//        JsonObject object = gson.fromJson(json, JsonObject.class);
+//        Toast.makeText(this, object.get("name").getAsString(), Toast.LENGTH_SHORT).show();
     }
 }
 
@@ -77,13 +79,13 @@ class Frags extends FragmentStateAdapter{
 
 
         switch (position){
-            case 0: //인기
+            case 0: // 인기
                 return new Fr_home();
-            case 1: //랭킹
+            case 1: // 카테고리
                 return new Fr_category();
-            case 2: //이벤트
+            case 2: // 매칭
                 return new Fr_match();
-            default: //3번, 추천
+            default: // 프로필
                 return new Fr_profile();
         }
 

@@ -49,10 +49,10 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
 
         list = new ArrayList<>();
         for(int i=0; i<4; i++) {
-            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
-            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
-            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
-            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
+            list.add(new button("coding", R.drawable.ic_baseline_person_24));
+            list.add(new button("soccer", R.drawable.ic_baseline_person_24));
+            list.add(new button("baseball", R.drawable.ic_baseline_person_24));
+            list.add(new button("hello", R.drawable.ic_baseline_person_24));
         }
 
         holder.tag.setText(list.get(position).category_tag);

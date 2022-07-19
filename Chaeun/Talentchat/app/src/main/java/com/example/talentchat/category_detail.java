@@ -8,15 +8,29 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import java.util.ArrayList;
 
 public class category_detail extends AppCompatActivity {
 
     TextView cate;
     RecyclerView personView;
+
+
+    Handler handler;
+    Runnable runnable;
+    JsonObject object;
+
+    ArrayList<detail_button> list;
 
     public category_detail(){
 
@@ -27,6 +41,8 @@ public class category_detail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category_detail);
+
+        list = new ArrayList<>();
 
         //category ID 찾아서 연결
         cate = findViewById(R.id.category_name);
@@ -39,7 +55,37 @@ public class category_detail extends AppCompatActivity {
 
         personView = findViewById(R.id.personView);
         personView.setLayoutManager(new LinearLayoutManager(this));
-        personView.setAdapter(new Adapter_category_detail_button());
+
+
+
+        /////////////////////////////////////////////// 2번
+        Get.get(this, Get.getToken(this), Get.Menu.category, category); // 카테고리별 불러오기
+        handler = new Handler();
+        runnable = () -> {
+            if(Get.isReady){
+
+                object = Get.jsonObject[Get.Menu.category.ordinal()];
+                JsonArray users = object.get("data").getAsJsonArray();
+                //Toast.makeText(this, users.toString(), Toast.LENGTH_SHORT).show();
+
+                for(int i=0; i<users.size(); i++){
+                    String req = users.get(i).getAsJsonObject().get("reqtalent").getAsString();
+                    String res = users.get(i).getAsJsonObject().get("restalent").getAsString();
+                    String name = users.get(i).getAsJsonObject().get("name").getAsString();
+                    String id = users.get(i).getAsJsonObject().get("username").getAsString();
+                    list.add(new detail_button(req, res, R.drawable.ic_baseline_home_24, name, id));
+                    personView.setAdapter(new Adapter_category_detail_button(list));
+                }
+
+
+            }else {
+                handler.postDelayed(runnable, 100);
+            }
+        };
+        handler.post(runnable);
+        /////////////////////////////////////////////////////////////////
+
+
     }
 
 }
