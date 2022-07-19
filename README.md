@@ -21,7 +21,9 @@
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
  - node.js
+ - Javascript
  - MongoDB
+ - Rest API
  
 ### Front-end
  - Java
