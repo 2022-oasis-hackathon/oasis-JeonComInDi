@@ -46,14 +46,15 @@ public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> 
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
         list = new ArrayList<>();
-       // list.add("이채은", )
+        list.add("이채은", )
 
 
-        //holder.name.setText(list.get(position).name);
+        holder.name.setText(list.get(position).name);
 
-        //String description = String.format("#%s #%s", list.get(position).tags[0], list.get(position).tags[1]);
+        String description = String.format("#%s #%s",
+                list.get(position).tags[0], list.get(position).tags[1]);
 
-        //holder.description.setText(description);
+        holder.description.setText(description);
     }
 
     //반복 횟수

@@ -43,24 +43,24 @@ public class home extends AppCompatActivity {
             }
         }).attach();
 
-//        Gson gson = new Gson();
-//        String json = "{\n" +
-//                "\"name\": \"이름\",\n" +
-//                "\"age\": 24,\n" +
-//                "\"username\": \"유저id\",\n" +
-//                "\"password\": \"비번\",\n" +
-//                "\"certification\": false,\n" +
-//                "\"universityName\": \"전남대학교\",\n" +
-//                "\"department\": \"소프트웨어공학과\",\n" +
-//                "\"reqtalent\": \"코딩\",\n" +
-//                "\"restalent\": \"음악\",\n" +
-//                "\"degree\": 10,\n" +
-//                "\"reqapply\": [\"가\", \"나\"],\n" +
-//                "\"resapply\": [\"가\", \"나\"],\n" +
-//                "\"matchuser\": [\"가\", \"나\"]\n" +
-//                "}";
-//        JsonObject object = gson.fromJson(json, JsonObject.class);
-//        Toast.makeText(this, object.get("name").getAsString(), Toast.LENGTH_SHORT).show();
+        Gson gson = new Gson();
+        String json = "{\n" +
+                "\"name\": \"이름\",\n" +
+                "\"age\": 24,\n" +
+                "\"username\": \"유저id\",\n" +
+                "\"password\": \"비번\",\n" +
+                "\"certification\": false,\n" +
+                "\"universityName\": \"전남대학교\",\n" +
+                "\"department\": \"소프트웨어공학과\",\n" +
+                "\"reqtalent\": \"코딩\",\n" +
+                "\"restalent\": \"음악\",\n" +
+                "\"degree\": 10,\n" +
+                "\"reqapply\": [\"가\", \"나\"],\n" +
+                "\"resapply\": [\"가\", \"나\"],\n" +
+                "\"matchuser\": [\"가\", \"나\"]\n" +
+                "}";
+        JsonObject object = gson.fromJson(json, JsonObject.class);
+        Toast.makeText(this, object.get("name").getAsString(), Toast.LENGTH_SHORT).show();
     }
 }
 
