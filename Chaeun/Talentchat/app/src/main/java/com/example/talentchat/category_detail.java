@@ -36,17 +36,10 @@ public class category_detail extends AppCompatActivity {
 
         //category에 받아온 글자 지정하기
         cate.setText(category);
-    }
 
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.category_detail, container);
-
-        personView = view.findViewById(R.id.personView);
-        personView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        personView = findViewById(R.id.personView);
+        personView.setLayoutManager(new LinearLayoutManager(this));
         personView.setAdapter(new Adapter_category_detail_button());
-
-        return view;
-
     }
+
 }

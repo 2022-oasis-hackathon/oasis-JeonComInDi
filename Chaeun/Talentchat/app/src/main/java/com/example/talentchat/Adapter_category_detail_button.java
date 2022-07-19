@@ -47,15 +47,14 @@ public class Adapter_category_detail_button extends RecyclerView.Adapter<Adapter
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
         list = new ArrayList<>();
-        list.add(new detail_button("헬스", "코딩", R.drawable.profile_logo));
-        list.add(new detail_button("헬스", "코딩", R.drawable.profile_logo));
-        list.add(new detail_button("헬스", "코딩", R.drawable.profile_logo));
-        list.add(new detail_button("헬스", "코딩", R.drawable.profile_logo));
-        list.add(new detail_button("헬스", "코딩", R.drawable.profile_logo));
+        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
+        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
 
         holder.req.setText(list.get(position).category_req);
         holder.res.setText(list.get(position).category_res);
-        holder.res.setText(list.get(position).category_detail_image);
 
         holder.detail_image.setBackground(ResourcesCompat.getDrawable(holder.itemView.getResources(),
                 list.get(position).category_detail_image, holder.itemView.getContext().getTheme()));

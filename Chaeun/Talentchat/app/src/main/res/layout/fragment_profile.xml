@@ -6,73 +6,90 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="135dp"
-        android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/imageView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username"
-        app:srcCompat="@drawable/go_matching" />
-
-    <TextView
-        android:id="@+id/Username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="김하람"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginBottom="50dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="366dp"
+        android:layout_height="548dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile_plus1" />
+        app:layout_constraintVertical_bias="0.45">
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="152dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="90dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile_plus2" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="137dp"
+            android:layout_height="134dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/profile" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="249dp"
-        android:layout_height="19dp"
-        android:layout_marginBottom="219dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:srcCompat="@drawable/profile_plus3" />
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="263dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Username"
+            app:srcCompat="@drawable/go_matching" />
+
+        <TextView
+            android:id="@+id/Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="김하람"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="130dp"
+            android:layout_height="113dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_plus1" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="152dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="180dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_plus2" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="249dp"
+            android:layout_height="19dp"
+            android:layout_marginBottom="219dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            app:srcCompat="@drawable/profile_plus3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

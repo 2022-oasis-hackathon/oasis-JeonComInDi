@@ -33,17 +33,16 @@ public class Fr_match extends Fragment {
         matchingView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         matchingView.setAdapter(new Adapter_ranking());
 
+        receive_button = view.findViewById(R.id.receive_matching);
+        receive_button.setOnClickListener(v -> {
+            startActivity(new Intent(getContext(), match2.class));
+        });
+
+        complete_button = view.findViewById(R.id.matching_complete);
+        complete_button.setOnClickListener(v -> {
+            startActivity(new Intent(getContext(), match3.class));
+        });
+
         return view;
-
-        receive_button = findViewById(R.id.receive_matching);
-        receive_button.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Fr_match2.class));
-        });
-
-        complete_button = findViewById(R.id.matching_complete);
-        complete_button.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Fr_match3.class));
-        });
-
     }
 }
