@@ -6,15 +6,19 @@ var userSchema = mongoose.Schema({
   name:{
     type:String,
     required:[true,'Name is required!'],
-    match:[/^.{4,12}$/,'Should be 4-12 characters!'],
-    trim:true,
+    match:[/^.{3,12}$/,'Should be 3-12 characters!'],
+    trim:true
   },
   age:{
     type:Number,
     required:[true,'Age is required!'],
     match:[/\d{2}$/,'Over 10years old'],
-    trim:true, 
+    trim:true 
   },
+  gender:{
+    type:String,
+    required:[true,'Gender is required!']
+   },
   username:{
     type:String,
     required:[true,'ID is required!'],
@@ -26,6 +30,10 @@ var userSchema = mongoose.Schema({
     type:String,
     required:[true,'Password is required!'],
     select:false
+  },
+  contact:{
+   type:String,
+   required:[true,'Contact is required!']
   },
   certification:{
     type:Boolean,
@@ -135,6 +143,5 @@ userSchema.methods.authenticate = function (password) {
   return bcrypt.compareSync(password,user.password);
 };
 
-// model & export
 var User = mongoose.model('Appuser',userSchema);
 module.exports = User;

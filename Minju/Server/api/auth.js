@@ -35,7 +35,8 @@ router.post('/login',
       else {
         var payload = {
           _id : user._id,
-          username: user.username
+          username: user.username,
+          name: user.name
         };
         var secretOrPrivateKey = process.env.JWT_SECRET;
         var options = {expiresIn: 60*60*24};

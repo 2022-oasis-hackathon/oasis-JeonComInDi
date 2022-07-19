@@ -7,36 +7,34 @@ const PROMISE = require("bluebird");
 // 1. 내가 신청한 목록 출력
 router.get('/my_request', util.isLoggedin,
   function(req,res,next){
-    console.log(req.decoded.username);
-    User.findOne({username:req.decoded.username})
-    .exec(
-      function(err,user){
-        global.n_list = [];
-        const prom1 = new Promise((resolve, reject)=>{
-          for(var i = 0; i < user.reqapply.length; i++){
-            const prom = new Promise((resolve, reject)=>{
-                console.log(user.reqapply[i]);
-                User.findOne({username:user.reqapply[i]})
-                .exec(
-                  function(err,user1){
-                    if(err||!user1) reject('err');
-                    console.log(user1);
-                    console.log(n_list);
-                    resolve(user1)
-                  }) 
-                }
-            )
-            prom.then((user1)=>{
-              n_list.push(user1)
-            })    
-          }
-          resolve(n_list)
-        }) 
-        prom1.then((n_list)=>{
-          res.json(util.successTrue(n_list))
-        })    
-    } 
-  )}
+    User.findById(req.decoded._id)
+    .exec(function(err,user){
+      if(err||!user) return res.json(util.successFalse(err));
+      res.json(util.successTrue(user.reqapply));
+    })
+  } 
+)
+
+// 2. 내가 신청받은 목록 출력
+router.get('/my_response', util.isLoggedin,
+  function(req,res,next){
+    User.findById(req.decoded._id)
+    .exec(function(err,user){
+      if(err||!user) return res.json(util.successFalse(err));
+      res.json(util.successTrue(user.resapply));
+    })
+  } 
+)
+
+// 3. 매칭 목록 출력
+router.get('/my_matching', util.isLoggedin,
+  function(req,res,next){
+    User.findById(req.decoded._id)
+    .exec(function(err,user){
+      if(err||!user) return res.json(util.successFalse(err));
+      res.json(util.successTrue(user.matchuser));
+    })
+  } 
 )
 
   module.exports = router;

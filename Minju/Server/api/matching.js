@@ -6,7 +6,7 @@ var util     = require('../util');
 // 1. 매칭 신청
 router.put('/:username/apply', util.isLoggedin,
  function(req,res,next){
-  // 신청자 reqapply에 피신청자 id 추가)
+  // 신청자(decoded) reqapply에 피신청자 id(param) 추가)
   User.findOne({username:req.decoded.username})
   .exec(function(err,user){
     if(err||!user) return res.json(util.successFalse(err));

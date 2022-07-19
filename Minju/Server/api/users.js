@@ -3,7 +3,7 @@ var router   = express.Router();
 var User     = require('../models/User');
 var util     = require('../util');
 
-// index
+// 모든 사용자 출력
 router.get('/', util.isLoggedin, function(req,res,next){
   User.find({})
   .sort({username:1})
@@ -12,7 +12,7 @@ router.get('/', util.isLoggedin, function(req,res,next){
   });
 });
 
-// create 이미지 넣을라면 얘 따로 빼야하나?
+// 사용자 생성(회원 가입)
 router.post('/', function(req,res,next){
   var newUser = new User(req.body);
   newUser.save(function(err,user){
@@ -20,7 +20,7 @@ router.post('/', function(req,res,next){
   });
 });
 
-// show
+// username을 가진 사용자 보기
 router.get('/:username', util.isLoggedin, function(req,res,next){
   User.findOne({username:req.params.username})
   .exec(function(err,user){
@@ -28,21 +28,22 @@ router.get('/:username', util.isLoggedin, function(req,res,next){
   });
 });
 
-// update
+
+// 사용자 정보 업데이트
 router.put('/:username', util.isLoggedin, checkPermission, function(req,res,next){
   User.findOne({username:req.params.username})
   .select({password:1})
   .exec(function(err,user){
     if(err||!user) return res.json(util.successFalse(err));
 
-    // update user object
+    // 업데이트
     user.originalPassword = user.password;
     user.password = req.body.newPassword? req.body.newPassword: user.password;
     for(var p in req.body){
       user[p] = req.body[p];
     }
 
-    // save updated user
+    // 업데이트된 정보를 DB에 저장
     user.save(function(err,user){
       if(err||!user) return res.json(util.successFalse(err));
       else {
@@ -53,7 +54,7 @@ router.put('/:username', util.isLoggedin, checkPermission, function(req,res,next
   });
 });
 
-// destroy
+// 사용자 삭제 (해당 기능은 관리자 전용)
 router.delete('/:username', util.isLoggedin, checkPermission, function(req,res,next){
   User.findOneAndRemove({username:req.params.username})
   .exec(function(err,user){
@@ -63,7 +64,7 @@ router.delete('/:username', util.isLoggedin, checkPermission, function(req,res,n
 
 module.exports = router;
 
-// private functions
+// 권한 설정
 function checkPermission(req,res,next){
   User.findOne({username:req.params.username}, function(err,user){
     if(err||!user) return res.json(util.successFalse(err));
