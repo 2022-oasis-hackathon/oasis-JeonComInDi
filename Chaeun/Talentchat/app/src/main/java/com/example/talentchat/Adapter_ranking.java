@@ -18,19 +18,19 @@ public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> 
     //작은 뷰 하나
     static class MyVH extends  RecyclerView.ViewHolder{
 
-        //4가지 정보를 선언! (번호, 이름, 설명, 이미지)
-        TextView rankNum;
+        //3가지 정보를 선언! (이름, 설명, 이미지)
         TextView name;
-        TextView description;
+        TextView tag;
         ImageView imageView;
+        ImageView imageView2;
 
         public MyVH(@NonNull View itemView) {
             super(itemView);
 
-            rankNum = itemView.findViewById(R.id.rank_num);
             name = itemView.findViewById(R.id.rank_name);
-            description = itemView.findViewById(R.id.rank_university);
+            tag = itemView.findViewById(R.id.rank_tag);
             imageView = itemView.findViewById(R.id.rank_image);
+            imageView = itemView.findViewById(R.id.rank_profile);
         }
     }
 
@@ -46,22 +46,12 @@ public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> 
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
         list = new ArrayList<>();
-        list.add(new User("이채은", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("강대희", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
-        list.add(new User("김민주", "전남대학교", 12345, new String[]{"예술", "음악"}));
+        list.add("이채은", )
 
-        holder.rankNum.setText(String.valueOf(position+1));
+
         holder.name.setText(list.get(position).name);
 
-        String description = String.format("%s | ● %s | #%s #%s",
-                list.get(position).school, list.get(position).follower,
+        String description = String.format("#%s #%s",
                 list.get(position).tags[0], list.get(position).tags[1]);
 
         holder.description.setText(description);

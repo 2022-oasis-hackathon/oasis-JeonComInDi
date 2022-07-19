@@ -48,7 +48,10 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
         list = new ArrayList<>();
-        for(int i=0; i<16; i++) {
+        for(int i=0; i<4; i++) {
+            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
+            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
+            list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
             list.add(new button("#헬스", R.drawable.ic_baseline_person_24));
         }
 
