@@ -12,12 +12,26 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+class LoginData{
+    String username;
+    String password;
+
+    public LoginData(String username, String password){
+        this.password = password;
+        this.username = username;
+    }
+}
+
+
 public interface ApiService {
 
     //   기반 주소                     |  GET  |    Query     |
     //   http://192.168.0.29:3001/api/auth/me?x-access-token=[String data]
     @GET("auth/me")
     Call<ResponseBody> getFunc(@Header("x-access-token") String data);
+
+    @GET("auth/me")
+    Call<ResponseBody> getMe(@Header("x-access-token") String data);
 
 
     //   기반 주소                     |  GET  |    Field     |
