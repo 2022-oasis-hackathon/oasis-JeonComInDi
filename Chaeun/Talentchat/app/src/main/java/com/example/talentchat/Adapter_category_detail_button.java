@@ -13,6 +13,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Adapter_category_detail_button extends RecyclerView.Adapter<Adapter_category_detail_button.MyVH> {
 
@@ -50,18 +51,27 @@ public class Adapter_category_detail_button extends RecyclerView.Adapter<Adapter
     @Override
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
+        HashMap<String, Integer> pics = new HashMap<>();
+        pics.put("강대희", R.drawable.kangdaehee);
+        pics.put("김은빈", R.drawable.kimeunbin);
+        pics.put("이채은", R.drawable.kimhanna);
+        pics.put("차유진", R.drawable.chayujin);
+        pics.put("신형환", R.drawable.sinhyunghwan);
+        pics.put("오동익", R.drawable.odongic);
+        pics.put("이주원", R.drawable.leejuwon);
+        pics.put("임일도", R.drawable.imildo);
+        pics.put("김민주", R.drawable.profile);
+
 //        list = new ArrayList<>();
-//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
-//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
-//        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
 //        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
 //        list.add(new detail_button("#헬스", "#코딩", R.drawable.profile_logo));
 
         holder.req.setText("#"+list.get(position).category_req);
         holder.res.setText("#"+list.get(position).category_res);
 
+        //이미지
         holder.detail_image.setBackground(ResourcesCompat.getDrawable(holder.itemView.getResources(),
-                list.get(position).category_detail_image, holder.itemView.getContext().getTheme()));
+                pics.get(list.get(holder.getAdapterPosition()).username), holder.itemView.getContext().getTheme()));
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override

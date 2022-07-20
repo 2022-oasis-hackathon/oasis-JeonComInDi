@@ -81,16 +81,16 @@ public class Fr_profile extends Fragment {
         TextView universityName = view.findViewById(R.id.universityName);
         universityName.setText(object.get("universityName").getAsString());
         TextView department = view.findViewById(R.id.department);
-        department.setText("department : "+object.get("department").getAsString());
+        department.setText("학과 : "+object.get("department").getAsString());
         TextView age = view.findViewById(R.id.age);
-        age.setText("age : "+object.get("age").getAsString());
+        age.setText("나이 : "+object.get("age").getAsString());
         TextView gender = view.findViewById(R.id.gender);
-        gender.setText("gender : "+object.get("gender").getAsString());
+        gender.setText("성별 : "+object.get("gender").getAsString());
 
         TextView restalent = view.findViewById(R.id.restalent3);
         restalent.setText("#want : "+object.get("restalent").getAsString());
         TextView reqtalent = view.findViewById(R.id.reqtalent3);
-        reqtalent.setText("give : "+object.get("reqtalent").getAsString());
+        reqtalent.setText("#give : "+object.get("reqtalent").getAsString());
         TextView portfolio = view.findViewById(R.id.portfolio);
         portfolio.setText("portfolio : "+object.get("portfolio").getAsString());
 

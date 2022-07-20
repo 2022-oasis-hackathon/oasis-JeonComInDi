@@ -1,6 +1,7 @@
 package com.example.talentchat;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,11 +12,15 @@ import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
+import java.util.HashMap;
+
 public class UserProfile extends AppCompatActivity {
 
     Handler handler;
     Runnable runnable;
     JsonObject object;
+
+    ImageView userPic;
 
     //String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQ2NjY5NmNhZDBhYTA0NmNkMmQyMjYiLCJ1c2VybmFtZSI6ImtpbTE1ODQiLCJpYXQiOjE2NTgyMjYwNzAsImV4cCI6MTY1ODMxMjQ3MH0.cJmzfNZL2qRLfVT7RAVrGtxoEadQaRle7p4Vx9XZlJs";
 
@@ -36,11 +41,25 @@ public class UserProfile extends AppCompatActivity {
     TextView restalent;
     TextView portfolio;
 
+    HashMap<String, Integer> pics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+        pics = new HashMap<>();
+        pics.put("강대희", R.drawable.kangdaehee);
+        pics.put("김은빈", R.drawable.kimeunbin);
+        pics.put("이채은", R.drawable.kimhanna);
+        pics.put("차유진", R.drawable.chayujin);
+        pics.put("신형환", R.drawable.sinhyunghwan);
+        pics.put("오동익", R.drawable.odongic);
+        pics.put("이주원", R.drawable.leejuwon);
+        pics.put("임일도", R.drawable.imildo);
+        pics.put("김민주", R.drawable.profile);
+
+        userPic =findViewById(R.id.imageView14);
 
         requestBt_apply = findViewById(R.id.apply);
         requestBt_accept = findViewById(R.id.accept);
@@ -51,7 +70,7 @@ public class UserProfile extends AppCompatActivity {
         age = findViewById(R.id.age2);
         gender = findViewById(R.id.gender2);
         reqtalent = findViewById(R.id.reqtalent2);
-        restalent = findViewById(R.id.restalent);
+        restalent = findViewById(R.id.restalent2);
         portfolio = findViewById(R.id.portfolio2);
 
 
@@ -74,7 +93,7 @@ public class UserProfile extends AppCompatActivity {
             requestBt_apply.setVisibility(View.VISIBLE);
             requestBt_accept.setVisibility(View.GONE);
             requestBt_reject.setVisibility(View.GONE);
-            universityName.setVisibility(View.GONE);
+            universityName.setVisibility(View.VISIBLE);
             department.setVisibility(View.VISIBLE);
             age.setVisibility(View.VISIBLE);
             gender.setVisibility(View.VISIBLE);
@@ -86,10 +105,10 @@ public class UserProfile extends AppCompatActivity {
             requestBt_apply.setVisibility(View.GONE);
             requestBt_accept.setVisibility(View.VISIBLE);
             requestBt_reject.setVisibility(View.VISIBLE);
-            universityName.setVisibility(View.GONE);
-            department.setVisibility(View.GONE);
-            age.setVisibility(View.GONE);
-            gender.setVisibility(View.GONE);
+            universityName.setVisibility(View.VISIBLE);
+            department.setVisibility(View.VISIBLE);
+            age.setVisibility(View.VISIBLE);
+            gender.setVisibility(View.VISIBLE);
             reqtalent.setVisibility(View.VISIBLE);
             restalent.setVisibility(View.VISIBLE);
             portfolio.setVisibility(View.VISIBLE);
@@ -128,9 +147,14 @@ public class UserProfile extends AppCompatActivity {
         username.setText(object.get("name").getAsString());
 
         universityName.setText(object.get("universityName").getAsString());
-        department.setText("department : "+object.get("department").getAsString());
-        age.setText("age : "+object.get("age").getAsString());
-        gender.setText("gender : "+object.get("gender").getAsString());
+        department.setText(object.get("department").getAsString());
+        age.setText("나이 : "+object.get("age").getAsString());
+        gender.setText("성별 : "+object.get("gender").getAsString());
+        reqtalent.setText("#want : "+object.get("reqtalent").getAsString());
+        restalent.setText("#give : "+object.get("restalent").getAsString());
+        portfolio.setText("portfolio : "+object.get("portfolio").getAsString());
+
+        userPic.setBackground(ResourcesCompat.getDrawable(getResources(), pics.get(object.get("name").getAsString()), getTheme()));
 
 
         requestBt_apply.setOnClickListener( view -> {

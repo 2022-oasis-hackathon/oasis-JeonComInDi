@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".introduce3"
+            android:exported="false" />
+        <activity
+            android:name=".introduce2"
+            android:exported="false" />
+        <activity
+            android:name=".introduce1"
+            android:exported="false" />
+        <activity
             android:name=".UserProfile"
             android:exported="false" />
         <activity

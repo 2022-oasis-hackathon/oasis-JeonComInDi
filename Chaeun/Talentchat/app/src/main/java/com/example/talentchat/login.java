@@ -38,6 +38,8 @@ public class login extends AppCompatActivity {
             id = findViewById(R.id.id);
             pw = findViewById(R.id.pw);
 
+            //startActivity(new Intent(getApplicationContext(), introduce1.class));
+
             LoginData data = new LoginData(id.getText().toString(), pw.getText().toString());
 
 
@@ -51,9 +53,9 @@ public class login extends AppCompatActivity {
                     String t = preferences.getString("token", "invalid");
                     //Toast.makeText(this, t, Toast.LENGTH_SHORT).show();
                     Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), home.class));
 
-                    here();
+                    startActivity(new Intent(getApplicationContext(), introduce1.class));
+
 
                 }else {
                     handler.postDelayed(runnable, 100);
@@ -65,9 +67,6 @@ public class login extends AppCompatActivity {
         });
     }
 
-    void here(){
-
-    }
 
 }
 

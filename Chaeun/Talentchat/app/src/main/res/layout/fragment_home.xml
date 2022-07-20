@@ -23,7 +23,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="            Today 랭킹"
+                android:text="         Today 랭킹"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -34,12 +34,28 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/home_1" />
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="         현재 인기"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/home_2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="         추천"
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageView4"

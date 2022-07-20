@@ -24,6 +24,7 @@ import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -49,9 +50,7 @@ public class Fr_match extends Fragment {
     ArrayList<User> list;
 
     public Fr_match(){
-
     }
-
 
     @Nullable
     @Override

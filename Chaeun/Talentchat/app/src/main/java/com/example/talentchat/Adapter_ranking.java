@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> {
 
@@ -51,10 +52,19 @@ public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> 
     @Override
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
+        HashMap<String, Integer> pics = new HashMap<>();
+        pics.put("kang1111", R.drawable.kangdaehee);
+        pics.put("eun2222", R.drawable.kimeunbin);
+        pics.put("lee3333", R.drawable.kimhanna);
+        pics.put("cha4444", R.drawable.chayujin);
+        pics.put("shin7777", R.drawable.sinhyunghwan);
+        pics.put("oh8888", R.drawable.odongic);
+        pics.put("juwon6666", R.drawable.leejuwon);
+        pics.put("lim5555", R.drawable.imildo);
         holder.name.setText(list.get(position).name);
 
         holder.imageView.setBackground(ResourcesCompat.getDrawable(holder.itemView.getResources(),
-                list.get(position).image, holder.itemView.getContext().getTheme()));
+                pics.get(list.get(position).name), holder.itemView.getContext().getTheme()));
 
         View.OnClickListener listener = new View.OnClickListener() {
             Handler handler;
