@@ -39,7 +39,7 @@ util.parseError = function(errors){
       parsed[name] = { message:validationError.message };
     }
   } else if(errors.code == '11000' && errors.errmsg.indexOf('username') > 0) {
-    parsed.username = { message:'This username already exists!' };
+    parsed.username = { message:'해당 아이디가 이미 존재합니다!' };
   } else {
     parsed.unhandled = errors;
   }
@@ -50,7 +50,7 @@ util.parseError = function(errors){
 // middlewares
 util.isLoggedin = function(req,res,next){
   var token = req.headers['x-access-token'];
-  if (!token) return res.json(util.successFalse(null,'token is required!'));
+  if (!token) return res.json(util.successFalse(null,'토큰이 필요합니다!'));
   else {
     jwt.verify(token, process.env.JWT_SECRET, function(err, decoded) {
       if(err) return res.json(util.successFalse(err));

@@ -35,6 +35,9 @@ var userSchema = mongoose.Schema({
    type:String,
    required:[true,'Contact is required!']
   },
+  portfolio:{
+    type:String,
+   },
   certification:{
     type:Boolean,
     default:false
@@ -71,6 +74,10 @@ var userSchema = mongoose.Schema({
     type:[String],
     default:[]
   }
+  // image:{
+  //   data:Buffer,
+  //   contextType: String
+  // }
 },{
   toObject:{virtuals:true}
 });

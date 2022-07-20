@@ -3,7 +3,7 @@ var router   = express.Router();
 var User     = require('../models/User');
 var util     = require('../util');
 
-// 모든 사용자 출력
+// 모든 사용자 출력(관리자)
 router.get('/', util.isLoggedin, function(req,res,next){
   User.find({})
   .sort({username:1})
@@ -12,7 +12,7 @@ router.get('/', util.isLoggedin, function(req,res,next){
   });
 });
 
-// 사용자 생성(회원 가입)
+// 사용자 생성(해당 기능은 관리자 전용)
 router.post('/', function(req,res,next){
   var newUser = new User(req.body);
   newUser.save(function(err,user){

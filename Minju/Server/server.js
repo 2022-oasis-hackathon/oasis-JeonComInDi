@@ -4,6 +4,7 @@ var path       = require('path');
 var mongoose   = require('mongoose');
 var bodyParser = require('body-parser');
 
+
 // Database
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_DB_LOGIN_API, {useNewUrlParser:true, useUnifiedTopology:true});
@@ -15,6 +16,7 @@ db.on('error', function (err) {
   console.log('DB ERROR:', err);
 });
 
+
 // Middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -25,12 +27,15 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 // API
 app.use('/api/users', require('./api/users'));
 app.use('/api/auth', require('./api/auth'));
 app.use('/api/category', require('./api/category'));
 app.use('/api/matching', require('./api/matching'));
 app.use('/api/info', require('./api/info'));
+app.use('/api/uploads', require('./api/uploads'));
+
 
 // Server
 var port = 3001;
