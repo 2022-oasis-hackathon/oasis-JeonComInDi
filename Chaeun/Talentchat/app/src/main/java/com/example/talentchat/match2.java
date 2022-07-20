@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class match2 extends AppCompatActivity {
 
+    public static AppCompatActivity Match2;
     RecyclerView matchingView2;
     Button receive_button2;
     Button complete_button2;
@@ -24,7 +25,7 @@ public class match2 extends AppCompatActivity {
     Handler handler;
     Runnable runnable;
     JsonObject object;
-    int[] images = {R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.profile_logo};
+    int[] images = {R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.cat_camera, R.drawable.profile_logo};
 
     ArrayList<User> list;
 
@@ -33,10 +34,11 @@ public class match2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.match2);
 
-        list = new ArrayList<>();
 
         matchingView2 = findViewById(R.id.matchingView2);
         matchingView2.setLayoutManager(new GridLayoutManager(this, 2));
+
+        Match2 = match2.this;
 
 
 
@@ -46,6 +48,7 @@ public class match2 extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
+        list = new ArrayList<>();
         Get.get(this, Get.getToken(this), Get.Menu.responser, null); // 매칭 정보 불러오기
         handler = new Handler();
         runnable = () -> {
@@ -59,8 +62,8 @@ public class match2 extends AppCompatActivity {
                     String id = array.get(i).getAsString();
                     list.add(new User(id, images[i], 2));
                     matchingView2.setAdapter(new Adapter_ranking(list));
-                }
 
+                }
             }else {
                 handler.postDelayed(runnable, 100);
             }

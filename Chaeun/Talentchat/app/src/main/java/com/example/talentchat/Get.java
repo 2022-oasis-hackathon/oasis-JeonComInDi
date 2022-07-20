@@ -33,7 +33,7 @@ public class Get {
     private static Retrofit retrofit;
     private static ApiService service;
     private static final String TAG = "MainActivityLog";
-    private static final String URL = "http://192.168.0.29:3001/api/";
+    private static final String URL = "http://172.30.1.44:3001/api/";
     public static Gson gson;
     public static JsonObject jsonObject[];
 
@@ -239,6 +239,7 @@ public class Get {
                         // json
                         JsonObject r = gson.fromJson(result, JsonObject.class);
                         isSent = r.get("success").getAsBoolean();
+                        Toast.makeText(context, r.get("data").getAsString(),  Toast.LENGTH_SHORT).show();
 
 
 

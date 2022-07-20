@@ -50,7 +50,7 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
         list = new ArrayList<>();
         //이런거 alt 누르고 드래그 쫙 해서 한 번에 써주면 개꿀
         list.add(new button("coding"    ,   R.drawable.cat_coding       ));
-        list.add(new button("soccer"    ,   R.drawable.cat_camera       ));
+        list.add(new button("photo"    ,   R.drawable.cat_camera       ));
         list.add(new button("health"  ,   R.drawable.cat_health       ));
         list.add(new button("language"     ,   R.drawable.cat_lang         ));
         list.add(new button("music"    ,   R.drawable.cat_music        ));

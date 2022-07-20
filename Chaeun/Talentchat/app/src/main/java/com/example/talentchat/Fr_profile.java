@@ -87,6 +87,13 @@ public class Fr_profile extends Fragment {
         TextView gender = view.findViewById(R.id.gender);
         gender.setText("gender : "+object.get("gender").getAsString());
 
+        TextView restalent = view.findViewById(R.id.restalent3);
+        restalent.setText("#want : "+object.get("restalent").getAsString());
+        TextView reqtalent = view.findViewById(R.id.reqtalent3);
+        reqtalent.setText("give : "+object.get("reqtalent").getAsString());
+        TextView portfolio = view.findViewById(R.id.portfolio);
+        portfolio.setText("portfolio : "+object.get("portfolio").getAsString());
+
 
 
     }

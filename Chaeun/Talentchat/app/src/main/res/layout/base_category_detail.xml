@@ -24,9 +24,9 @@
 
     <ImageView
         android:id="@+id/cate_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="88dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="11dp"
         android:background="@drawable/ic_baseline_person_24"
         android:backgroundTint="#2946E6"
         android:elevation="30dp"

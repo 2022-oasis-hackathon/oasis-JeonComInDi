@@ -32,6 +32,10 @@ public class UserProfile extends AppCompatActivity {
     TextView department;
     TextView age;
     TextView gender;
+    TextView reqtalent;
+    TextView restalent;
+    TextView portfolio;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,9 @@ public class UserProfile extends AppCompatActivity {
         department = findViewById(R.id.department2);
         age = findViewById(R.id.age2);
         gender = findViewById(R.id.gender2);
+        reqtalent = findViewById(R.id.reqtalent2);
+        restalent = findViewById(R.id.restalent);
+        portfolio = findViewById(R.id.portfolio2);
 
 
         //username = getIntent().getStringExtra("name");
@@ -59,15 +66,21 @@ public class UserProfile extends AppCompatActivity {
             department.setVisibility(View.VISIBLE);
             age.setVisibility(View.VISIBLE);
             gender.setVisibility(View.VISIBLE);
+            reqtalent.setVisibility(View.VISIBLE);
+            restalent.setVisibility(View.VISIBLE);
+            portfolio.setVisibility(View.VISIBLE);
 
         }else if(mode==1) { //카테고리
             requestBt_apply.setVisibility(View.VISIBLE);
             requestBt_accept.setVisibility(View.GONE);
             requestBt_reject.setVisibility(View.GONE);
             universityName.setVisibility(View.GONE);
-            department.setVisibility(View.GONE);
-            age.setVisibility(View.GONE);
-            gender.setVisibility(View.GONE);
+            department.setVisibility(View.VISIBLE);
+            age.setVisibility(View.VISIBLE);
+            gender.setVisibility(View.VISIBLE);
+            reqtalent.setVisibility(View.VISIBLE);
+            restalent.setVisibility(View.VISIBLE);
+            portfolio.setVisibility(View.VISIBLE);
         }
         else{ // 받은 매칭
             requestBt_apply.setVisibility(View.GONE);
@@ -77,6 +90,9 @@ public class UserProfile extends AppCompatActivity {
             department.setVisibility(View.GONE);
             age.setVisibility(View.GONE);
             gender.setVisibility(View.GONE);
+            reqtalent.setVisibility(View.VISIBLE);
+            restalent.setVisibility(View.VISIBLE);
+            portfolio.setVisibility(View.VISIBLE);
         }
 
         /////////////////////////////////////////////// 2번
@@ -98,6 +114,8 @@ public class UserProfile extends AppCompatActivity {
         };
         handler.post(runnable);
         /////////////////////////////////////////////////////////////////
+        match2 Match2 = (match2)match2.Match2;
+        Match2.finish();
     }
 
     ///////////////////////////////////////////////////////////////// 3번

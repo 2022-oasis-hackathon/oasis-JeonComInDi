@@ -24,7 +24,7 @@ public class match3 extends AppCompatActivity {
     Handler handler;
     Runnable runnable;
     JsonObject object;
-    int[] images = {R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.profile_logo, R.drawable.profile_logo};
+    int[] images = {R.drawable.profile_logo};
 
     ArrayList<User> list;
 
@@ -33,7 +33,6 @@ public class match3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.match3);
 
-        list = new ArrayList<>();
 
         matchingView3 = findViewById(R.id.matchingView3);
         matchingView3.setLayoutManager(new GridLayoutManager(this, 2));
@@ -44,6 +43,7 @@ public class match3 extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        list = new ArrayList<>();
         Get.get(this, Get.getToken(this), Get.Menu.my_matching, null); // 매칭 정보 불러오기
         handler = new Handler();
         runnable = () -> {
