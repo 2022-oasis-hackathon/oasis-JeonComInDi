@@ -38,6 +38,14 @@ public class match2 extends AppCompatActivity {
         matchingView2 = findViewById(R.id.matchingView2);
         matchingView2.setLayoutManager(new GridLayoutManager(this, 2));
 
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         Get.get(this, Get.getToken(this), Get.Menu.responser, null); // 매칭 정보 불러오기
         handler = new Handler();
         runnable = () -> {
@@ -45,7 +53,7 @@ public class match2 extends AppCompatActivity {
 
                 object = Get.jsonObject[Get.Menu.responser.ordinal()];
                 JsonArray array = object.get("data").getAsJsonArray();
-                Toast.makeText(this, array.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, array.toString(), Toast.LENGTH_SHORT).show();
 
                 for(int i=0; i<array.size(); i++){
                     String id = array.get(i).getAsString();
@@ -58,7 +66,6 @@ public class match2 extends AppCompatActivity {
             }
         };
         handler.post(runnable);
-
     }
 }
 

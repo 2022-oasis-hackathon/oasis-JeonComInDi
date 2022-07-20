@@ -23,14 +23,14 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
     static class MyVH extends  RecyclerView.ViewHolder{
 
         //4가지 정보를 선언! (번호, 이름, 설명, 이미지)
-        Button button;
+        //Button button;
         TextView tag;
         ImageView imageView;
 
         public MyVH(@NonNull View itemView) {
             super(itemView);
 
-            button = itemView.findViewById(R.id.cate_detail_button);
+           // button = itemView.findViewById(R.id.cate_detail_button);
             tag = itemView.findViewById(R.id.cate_detail_tag);
             imageView = itemView.findViewById(R.id.cate_detail_image);
         }
@@ -48,12 +48,25 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
     public void onBindViewHolder(@NonNull MyVH holder, int position) {
 
         list = new ArrayList<>();
-        for(int i=0; i<4; i++) {
-            list.add(new button("coding", R.drawable.ic_baseline_person_24));
-            list.add(new button("soccer", R.drawable.ic_baseline_person_24));
-            list.add(new button("baseball", R.drawable.ic_baseline_person_24));
-            list.add(new button("hello", R.drawable.ic_baseline_person_24));
-        }
+        //이런거 alt 누르고 드래그 쫙 해서 한 번에 써주면 개꿀
+        list.add(new button("coding"    ,   R.drawable.cat_coding       ));
+        list.add(new button("soccer"    ,   R.drawable.cat_camera       ));
+        list.add(new button("health"  ,   R.drawable.cat_health       ));
+        list.add(new button("language"     ,   R.drawable.cat_lang         ));
+        list.add(new button("music"    ,   R.drawable.cat_music        ));
+        list.add(new button("cook"    ,   R.drawable.cat_cook         ));
+        list.add(new button("game"    ,   R.drawable.cat_game         ));
+        list.add(new button("fashion"    ,   R.drawable.cat_fashion      ));
+        list.add(new button("stock"    ,   R.drawable.cat_downtodown   ));
+        list.add(new button("english"    ,   R.drawable.cat_english      ));
+        list.add(new button("act"    ,   R.drawable.cat_yeongi       ));
+        list.add(new button("leisure"    ,   R.drawable.cat_boat         ));
+        list.add(new button("korean"    ,   R.drawable.cat_korean       ));
+        list.add(new button("craft"    ,   R.drawable.cat_gongyeah     ));
+        list.add(new button("volunteer"    ,   R.drawable.cat_volunteer    ));
+        list.add(new button("etc"    ,   R.drawable.cat_etc          ));
+
+
 
         holder.tag.setText(list.get(position).category_tag);
 
@@ -72,7 +85,7 @@ public class Adapter_category_button extends RecyclerView.Adapter<Adapter_catego
 
         //holder 안에서 itemView, button, imageView를 눌렀을 때 인식되도록
         holder.itemView.setOnClickListener(listener);
-        holder.button.setOnClickListener(listener);
+        //holder.button.setOnClickListener(listener);
         holder.imageView.setOnClickListener(listener);
     }
 

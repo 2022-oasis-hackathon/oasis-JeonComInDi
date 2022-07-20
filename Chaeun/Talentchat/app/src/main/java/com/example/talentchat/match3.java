@@ -38,6 +38,12 @@ public class match3 extends AppCompatActivity {
         matchingView3 = findViewById(R.id.matchingView3);
         matchingView3.setLayoutManager(new GridLayoutManager(this, 2));
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         Get.get(this, Get.getToken(this), Get.Menu.my_matching, null); // 매칭 정보 불러오기
         handler = new Handler();
         runnable = () -> {
@@ -45,7 +51,7 @@ public class match3 extends AppCompatActivity {
 
                 object = Get.jsonObject[Get.Menu.my_matching.ordinal()];
                 JsonArray array = object.get("data").getAsJsonArray();
-                Toast.makeText(this, array.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, array.toString(), Toast.LENGTH_SHORT).show();
 
                 for(int i=0; i<array.size(); i++){
                     String id = array.get(i).getAsString();

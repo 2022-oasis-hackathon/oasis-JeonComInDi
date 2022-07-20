@@ -234,7 +234,7 @@ public class Get {
                     try {
 
                         String result = response.body().string(); // json {"": ""}
-                        Toast.makeText(context, result, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, result, Toast.LENGTH_SHORT).show();
 
                         // json
                         JsonObject r = gson.fromJson(result, JsonObject.class);

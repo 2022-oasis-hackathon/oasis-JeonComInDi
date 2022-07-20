@@ -73,7 +73,7 @@ public class category_detail extends AppCompatActivity {
                     String res = users.get(i).getAsJsonObject().get("restalent").getAsString();
                     String name = users.get(i).getAsJsonObject().get("name").getAsString();
                     String id = users.get(i).getAsJsonObject().get("username").getAsString();
-                    list.add(new detail_button(req, res, R.drawable.ic_baseline_home_24, name, id));
+                    list.add(new detail_button(req, res, R.drawable.ic_baseline_home_24, name, id, 1));
                     personView.setAdapter(new Adapter_category_detail_button(list));
                 }
 

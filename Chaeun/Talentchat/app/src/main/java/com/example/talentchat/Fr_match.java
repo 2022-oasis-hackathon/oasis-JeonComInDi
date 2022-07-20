@@ -89,11 +89,11 @@ public class Fr_match extends Fragment {
 
                 object = Get.jsonObject[Get.Menu.matching_list.ordinal()];
                 JsonArray array = object.get("data").getAsJsonArray();
-                Toast.makeText(getContext(), array.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), array.toString(), Toast.LENGTH_SHORT).show();
 
                 for(int i=0; i<array.size(); i++){
                     String id = array.get(i).getAsString();
-                    list.add(new User(id, images[i], 1));
+                    list.add(new User(id, images[i], 0));
                     matchingView.setAdapter(new Adapter_ranking(list));
                 }
                 here();

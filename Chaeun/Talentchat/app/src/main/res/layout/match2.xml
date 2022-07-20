@@ -8,12 +8,10 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/apply_matching_button"
         android:elevation="0dp"
-        android:text="신청 매칭"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/matchingView2"
         app:layout_constraintEnd_toStartOf="@+id/receive_matching2"
@@ -22,12 +20,10 @@
 
     <Button
         android:id="@+id/receive_matching2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button"
-        android:backgroundTint="#8BCDFF"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/response_matching_button"
         android:elevation="0dp"
-        android:text="받은 매칭"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/matchingView2"
         app:layout_constraintEnd_toStartOf="@+id/matching_complete2"
@@ -36,12 +32,10 @@
 
     <Button
         android:id="@+id/matching_complete2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/complete_matching_button"
         android:elevation="0dp"
-        android:text="신청 완료"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/matchingView2"
         app:layout_constraintEnd_toEndOf="parent"

@@ -54,8 +54,10 @@ public class Fr_profile extends Fragment {
             if(Get.isReady){
 
                 object = Get.jsonObject[Get.Menu.me.ordinal()];
+                if(object==null) return;
+
                 object = object.get("data").getAsJsonObject();
-                Toast.makeText(getContext(), object.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), object.toString(), Toast.LENGTH_SHORT).show();
                 here();
 
             }else {
@@ -79,11 +81,11 @@ public class Fr_profile extends Fragment {
         TextView universityName = view.findViewById(R.id.universityName);
         universityName.setText(object.get("universityName").getAsString());
         TextView department = view.findViewById(R.id.department);
-        department.setText(object.get("department").getAsString());
+        department.setText("department : "+object.get("department").getAsString());
         TextView age = view.findViewById(R.id.age);
-        age.setText(object.get("age").getAsString());
+        age.setText("age : "+object.get("age").getAsString());
         TextView gender = view.findViewById(R.id.gender);
-        gender.setText(object.get("gender").getAsString());
+        gender.setText("gender : "+object.get("gender").getAsString());
 
 
 
