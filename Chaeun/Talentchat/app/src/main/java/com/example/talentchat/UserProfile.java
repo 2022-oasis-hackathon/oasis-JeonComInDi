@@ -49,16 +49,16 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        pics = new HashMap<>();
-        pics.put("강대희", R.drawable.kangdaehee);
-        pics.put("김은빈", R.drawable.kimeunbin);
-        pics.put("이채은", R.drawable.kimhanna);
-        pics.put("차유진", R.drawable.chayujin);
-        pics.put("신형환", R.drawable.sinhyunghwan);
-        pics.put("오동익", R.drawable.odongic);
-        pics.put("이주원", R.drawable.leejuwon);
-        pics.put("임일도", R.drawable.imildo);
-        pics.put("김민주", R.drawable.profile);
+        //pics = new HashMap<>();
+        //pics.put("강대희", R.drawable.kangdaehee);
+        //pics.put("김은빈", R.drawable.kimeunbin);
+        //pics.put("이채은", R.drawable.kimhanna);
+        //pics.put("차유진", R.drawable.chayujin);
+        //pics.put("신형환", R.drawable.sinhyunghwan);
+        //pics.put("오동익", R.drawable.odongic);
+        //pics.put("이주원", R.drawable.leejuwon);
+        //pics.put("임일도", R.drawable.imildo);
+        //pics.put("김민주", R.drawable.profile);
 
         userPic =findViewById(R.id.imageView14);
 
@@ -173,7 +173,7 @@ public class UserProfile extends AppCompatActivity {
         portfolio.setText("portfolio : "+object.get("portfolio").getAsString());
         contact.setText("contact : "+object.get("contact").getAsString());
 
-        userPic.setBackground(ResourcesCompat.getDrawable(getResources(), pics.get(object.get("name").getAsString()), getTheme()));
+        //userPic.setBackground(ResourcesCompat.getDrawable(getResources(), pics.get(object.get("name").getAsString()), getTheme()));
 
 
         requestBt_apply.setOnClickListener( view -> {
