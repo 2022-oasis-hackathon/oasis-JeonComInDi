@@ -73,7 +73,7 @@ public class Adapter_ranking extends RecyclerView.Adapter<Adapter_ranking.MyVH> 
 
             @Override
             public void onClick(View view) {
-                if(list.get(holder.getAdapterPosition()).mode == 3) {
+                if(list.get(holder.getAdapterPosition()).mode == 4) {
                     Get.get(holder.itemView.getContext(), Get.getToken(holder.itemView.getContext()), Get.Menu.user, list.get(holder.getAdapterPosition()).name); // 유저 정보 불러오기
                     handler = new Handler();
                     runnable = () -> {

@@ -40,6 +40,7 @@ public class UserProfile extends AppCompatActivity {
     TextView reqtalent;
     TextView restalent;
     TextView portfolio;
+    TextView contact;
 
     HashMap<String, Integer> pics;
 
@@ -72,6 +73,7 @@ public class UserProfile extends AppCompatActivity {
         reqtalent = findViewById(R.id.reqtalent2);
         restalent = findViewById(R.id.restalent2);
         portfolio = findViewById(R.id.portfolio2);
+        contact = findViewById(R.id.contact);
 
 
         //username = getIntent().getStringExtra("name");
@@ -88,6 +90,7 @@ public class UserProfile extends AppCompatActivity {
             reqtalent.setVisibility(View.VISIBLE);
             restalent.setVisibility(View.VISIBLE);
             portfolio.setVisibility(View.VISIBLE);
+            contact.setVisibility(View.GONE);
 
         }else if(mode==1) { //카테고리
             requestBt_apply.setVisibility(View.VISIBLE);
@@ -100,8 +103,9 @@ public class UserProfile extends AppCompatActivity {
             reqtalent.setVisibility(View.VISIBLE);
             restalent.setVisibility(View.VISIBLE);
             portfolio.setVisibility(View.VISIBLE);
-        }
-        else{ // 받은 매칭
+            contact.setVisibility(View.GONE);
+
+        }else if(mode==2) { //매칭 성사 목록
             requestBt_apply.setVisibility(View.GONE);
             requestBt_accept.setVisibility(View.VISIBLE);
             requestBt_reject.setVisibility(View.VISIBLE);
@@ -112,6 +116,20 @@ public class UserProfile extends AppCompatActivity {
             reqtalent.setVisibility(View.VISIBLE);
             restalent.setVisibility(View.VISIBLE);
             portfolio.setVisibility(View.VISIBLE);
+            contact.setVisibility(View.GONE);
+        }
+        else{ // 받은 매칭
+            requestBt_apply.setVisibility(View.GONE);
+            requestBt_accept.setVisibility(View.GONE);
+            requestBt_reject.setVisibility(View.GONE);
+            universityName.setVisibility(View.VISIBLE);
+            department.setVisibility(View.VISIBLE);
+            age.setVisibility(View.VISIBLE);
+            gender.setVisibility(View.VISIBLE);
+            reqtalent.setVisibility(View.VISIBLE);
+            restalent.setVisibility(View.VISIBLE);
+            portfolio.setVisibility(View.VISIBLE);
+            contact.setVisibility(View.VISIBLE);
         }
 
         /////////////////////////////////////////////// 2번
@@ -153,6 +171,7 @@ public class UserProfile extends AppCompatActivity {
         reqtalent.setText("#want : "+object.get("reqtalent").getAsString());
         restalent.setText("#give : "+object.get("restalent").getAsString());
         portfolio.setText("portfolio : "+object.get("portfolio").getAsString());
+        contact.setText("contact : "+object.get("contact").getAsString());
 
         userPic.setBackground(ResourcesCompat.getDrawable(getResources(), pics.get(object.get("name").getAsString()), getTheme()));
 

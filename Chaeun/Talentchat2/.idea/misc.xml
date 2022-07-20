@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2235" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/drawable/round.xml" value="0.2235" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1625" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout-w936dp/activity_login.xml" value="0.184375" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/activity_login2.xml" value="0.23125" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/activity_main.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/base_ranking.xml" value="0.4" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/fragment_event.xml" value="0.24512820512820513" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/fragment_popular.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/fragment_ranking.xml" value="0.24512820512820513" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/fragment_recommend.xml" value="0.24512820512820513" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/home.xml" value="0.264" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/login.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/start.xml" value="0.264" />
+        <entry key="..\:/Users/cylee/AndroidStudioProjects/Talentchat/app/src/main/res/layout/start2.xml" value="0.24512820512820513" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1265" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_auto_awesome_mosaic_24.xml" value="0.2265" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_contact_mail_24.xml" value="0.1265" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.176" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2265" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.252" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/round.xml" value="0.183" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/round2.xml" value="0.183" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/drawable/round_button.xml" value="0.1" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/activity_user_profile.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_category.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_category_detail.xml" value="0.4" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_matching.xml" value="0.4" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_ranking.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/base_round_button.xml" value="0.6" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/category_detail.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_category.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_event.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_home.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_match.xml" value="0.4" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_match2.xml" value="0.15925925925925927" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_match3.xml" value="0.15925925925925927" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_popular.xml" value="0.2327502429543246" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_profile.xml" value="0.23072916666666668" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_ranking.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/fragment_recommend.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/home.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/introduce.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/introduce1.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/introduce2.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/introduce3.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/login.xml" value="0.264" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/match2.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/match3.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/round_button.xml" value="0.4" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/start.xml" value="0.24947916666666667" />
+        <entry key="..\:/github/oasis-JeonComInDi/Chaeun/Talentchat/app/src/main/res/layout/start2.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

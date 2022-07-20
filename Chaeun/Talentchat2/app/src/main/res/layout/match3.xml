@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/apply_matching_white"
+        android:elevation="0dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/matchingView3"
+        app:layout_constraintEnd_toStartOf="@+id/receive_matching3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/receive_matching3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/receive_matching_white"
+        android:elevation="0dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/matchingView3"
+        app:layout_constraintEnd_toStartOf="@+id/matching_complete3"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/matching_complete3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/complete_matching_button"
+        android:elevation="0dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/matchingView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/receive_matching3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matchingView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"></androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
